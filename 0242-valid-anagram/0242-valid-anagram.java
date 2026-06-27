@@ -8,17 +8,18 @@ class Solution {
         }
         for(int i = 0; i<t.length(); i++){
             freq2[t.charAt(i)-'a']++;
-        }
+        // }
 
-        for(int i = 0; i<26; i++){
-            if(freq1[i] != freq2[i]){
-                return false;
-            }
-        }
-        return true;
+        // for(int i = 0; i<26; i++){
+        //     if(freq1[i] != freq2[i]){
+        //         return false;
+        //     }
+        // }
+        // return true;
         
 
-
+        }
+        return Arrays.equals(freq1, freq2);
         
     }
 }
