@@ -6,9 +6,9 @@ class Solution {
         }
         int count = 0;
         for(int x : map.keySet()){
-            int f = map.get(x);
+            //int f = map.get(x);
             if(map.get(x) > 1){
-                count += (f * (f-1)) / 2;
+                count += (map.get(x) *(map.get(x)-1)) / 2;
                 
             }
         }
