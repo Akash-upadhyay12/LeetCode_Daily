@@ -8,9 +8,6 @@ class Solution {
             if(map.get(ch) == 2){
                 return ch;
             }
-            else{
-                continue;
-            }
         }
         return 'a';
        
