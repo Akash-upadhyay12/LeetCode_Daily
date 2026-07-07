@@ -1,7 +1,7 @@
 class Solution {
     public int countEven(int num) {
         int count =0;
-        for(int i = 2; i<=num; i++){
+        for(int i = 1; i<=num; i++){
             int sum = 0;
             int j  = i;
             while(j>0){
