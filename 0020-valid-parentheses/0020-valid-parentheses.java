@@ -4,15 +4,15 @@ class Solution {
         for(int i = 0; i<s.length(); i++){
             char ch = s.charAt(i);
             if(ch == '(' || ch == '{' || ch == '['){
-                st.push(s.charAt(i));
+                st.push(ch);
             }
-            else if(ch == ')' && !st.isEmpty() && st.peek() == '('){
+            else if(!st.isEmpty() && ch == ')' && st.peek() == '('){
                 st.pop();
             }
-             else if(ch == '}' && !st.isEmpty() && st.peek() == '{'){
+            else if(!st.isEmpty() && ch == ']' && st.peek() == '['){
                 st.pop();
             }
-             else if(ch == ']' && !st.isEmpty() && st.peek() == '['){
+            else if(!st.isEmpty() && ch == '}' && st.peek() == '{'){
                 st.pop();
             }
             else{
