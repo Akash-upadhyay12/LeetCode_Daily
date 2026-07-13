@@ -6,9 +6,7 @@ class Solution {
             list.add(digit);
             n /=2;
         }
-        //Collections.reverse(list);
         int [] arr = new int [32];
-       // Arrays.fill(arr, 0);
         int i = 0;
         for(int  x : list){
             arr[i] = x;
