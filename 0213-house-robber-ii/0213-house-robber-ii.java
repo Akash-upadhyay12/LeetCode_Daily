@@ -1,5 +1,11 @@
 class Solution {
     public int rob(int[] arr) {
+        if(arr.length ==1){
+            return arr[arr.length-1];
+        }
+        if(arr.length == 2){
+            return Math.max(arr[arr.length-1], arr[arr.length-2]);
+        }
         int [] dp1 = new int[arr.length];
         dp1[0] = arr[0];
         dp1[1] = Math.max(dp1[0], arr[1]);
