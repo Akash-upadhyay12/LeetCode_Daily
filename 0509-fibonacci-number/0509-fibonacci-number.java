@@ -4,7 +4,7 @@ class Solution {
             return 0;
         }
         if(n == 1){
-            return 2;
+            return 1;
         }
         int [] dp = new int[n+1];
         dp[0] = 0;
