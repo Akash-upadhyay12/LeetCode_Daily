@@ -15,10 +15,11 @@ class Solution {
             int ans2 = dp[i-1];
             dp[i] = Math.max(ans,ans2);
         }
+        dp1[0] = 0;
         dp1[1] =arr[1];
         dp1[2] = Math.max(dp1[1],arr[2]);
         for(int i =3; i<arr.length; i++){
-            int ans = arr[i] + dp[i-2];
+            int ans = arr[i] + dp1[i-2];
             int ans2 = dp1[i-1];
             dp1[i] = Math.max(ans,ans2);
         }
