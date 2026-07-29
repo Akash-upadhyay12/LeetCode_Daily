@@ -9,7 +9,7 @@ class Solution {
                 char temp = arr[j];
                 arr[j] = arr[l];
                 arr[l] = temp;
-                l--; // swapped l variable update
+                l--;
                 j++;
             }
         }
