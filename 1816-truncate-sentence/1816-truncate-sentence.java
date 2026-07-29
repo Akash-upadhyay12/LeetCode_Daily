@@ -1,19 +1,11 @@
 class Solution {
-    public String truncateSentence(String s, int k) {
+    public String truncateSentence(String w, int k) {
         StringBuilder sb = new StringBuilder();
-        String [] word = s.split(" ");
-
+        String [] s = w.split(" ");
         for(int i = 0; i<k; i++){
-            sb.append(word[i] + " ");
+            sb.append(s[i] + " ");
         }
         return sb.toString().trim();
-
-
-
-        
-
-        
-
         
     }
 }
