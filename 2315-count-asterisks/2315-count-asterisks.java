@@ -11,7 +11,7 @@ class Solution {
                     continue;
                 }
             }
-            else if(pipecount<2 && pipecount >=1){
+            else if(pipecount<2){
                 if(s.charAt(i) == '|'){
                     pipecount++;
                 }
