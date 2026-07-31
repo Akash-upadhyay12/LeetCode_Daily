@@ -5,19 +5,17 @@ class Solution {
             char ch = s.charAt(i);
             map.put(ch, map.getOrDefault(ch, 0) +1);
         }
-        int count = 0;
+        int ans = s.length();
         for(char ch : map.keySet()){
-            if(map.get(ch)<3){
-                count += map.get(ch);
-            }
-            else if(map.get(ch)%2 == 0){
-                count += 2;
+            if(map.get(ch)%2 == 0){
+                ans -= (map.get(ch)-2);
             }
             else{
-                count +=1;
+                ans -= (map.get(ch)-1);
             }
-        }
-        return count;
+        }    
+            return ans;
+            
 
         
     }
