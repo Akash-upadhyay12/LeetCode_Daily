@@ -1,29 +1,25 @@
 class Solution {
     public boolean judgeCircle(String s) {
-        int u = 0;
-        int d = 0;
-        int l = 0;
-        int r = 0;
+        int c1 = 0;
+        int c2 = 0;
         for(int i = 0; i<s.length(); i++){
             if(s.charAt(i) == 'L'){
-                l++;
+                c1++;
             }
             else if(s.charAt(i) == 'R'){
-                r++;
+                c1--;
             }
             else if(s.charAt(i) == 'U'){
-                u++;
+                c2++;
             }
             else{
-                d++;
+                c2--;
             }
         }
-        if(u-d==0 && l-r==0){
+        if(c1 == 0 && c2 == 0){
             return true;
         }
-        else{
-            return false;
-        }
+        return false;
         
     }
 }
