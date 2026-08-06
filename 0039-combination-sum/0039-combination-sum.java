@@ -8,7 +8,7 @@ class Solution {
         return;
     }
     cur.add(nums[i]);
-    if(nums[i]<=target){
+    if(target>=0){
     check(nums, i, target-nums[i], cur, ans);
     }
     cur.remove(cur.size()-1);
