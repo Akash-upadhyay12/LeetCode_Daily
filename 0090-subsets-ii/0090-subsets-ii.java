@@ -1,21 +1,25 @@
 class Solution {
-    void check(int [] nums, int i, ArrayList<Integer> cur,Set<List<Integer>> ans){
+    void check(int [] nums, int i,ArrayList<Integer> cur,HashSet<List<Integer>> set){
         if(i>=nums.length){
-            ans.add(new ArrayList<>(cur));
+            set.add(new ArrayList<>(cur));
             return;
         }
+        //Same as subset 1 but the approach is quite different.
+        //Take the element 
         cur.add(nums[i]);
-        check(nums,i+1, cur, ans);
+        check(nums, i+1, cur , set);
+        // remove the last element
         cur.remove(cur.size()-1);
-        check(nums, i+1, cur, ans);
-
+        // skip or not take condition
+        check(nums, i+1, cur, set);
     }
     public List<List<Integer>> subsetsWithDup(int[] nums) {
-        Arrays.sort(nums);
+        //first we try the brute force approach
+        Arrays.sort(nums); // For maintaining order of element
         ArrayList<Integer> cur = new ArrayList<>();
-        Set<List<Integer>> ans = new HashSet<>();
-        check(nums, 0,cur, ans);
-        return new ArrayList<>(ans);
+        HashSet<List<Integer>> set = new HashSet<>(); // for remove all the duplicates
+        check(nums, 0, cur, set);
+        return new ArrayList<>(set);
         
     }
 }
