@@ -1,9 +1,9 @@
 class Solution {
     void check(String s, int i, StringBuilder cur, List<String> ans){
-       // if(i==s.length()){
+       if(i==s.length()){
         if(cur.length()==s.length()){
             ans.add(cur.toString());
-       // }
+       }
             return;
         }
         cur.append(s.charAt(i));
