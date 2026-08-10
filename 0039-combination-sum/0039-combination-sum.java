@@ -1,26 +1,23 @@
 class Solution {
-    void check(int [] nums,int i, int target,  ArrayList<Integer> cur, List<List<Integer>> ans, int sum){
+    void check(int [] nums,int i,  List<Integer> cur, List<List<Integer>> ans, int target){
         if(i==nums.length){
-        if(sum == target){
-            ans.add(new ArrayList<>(cur));;
+        if(target==0){
+            ans.add(new ArrayList<>(cur));
         }
-        return;
+            return;
         }
-
-        cur.add(nums[i]);
-        if(sum<=target){
-        check(nums, i,  target, cur ,ans, sum + nums[i]);
+        
+        if(target>=0){
+            cur.add(nums[i]);
+            check(nums, i, cur, ans, target-nums[i]);
+            cur.remove(cur.size()-1);
+            check(nums, i+1, cur, ans, target);
         }
-        cur.remove(cur.size()-1);
-        check(nums, i+1, target, cur, ans, sum);
-
-
     }
     public List<List<Integer>> combinationSum(int[] nums, int target) {
-        ArrayList<Integer>  cur = new ArrayList<>();
+        List<Integer> cur = new ArrayList<>();
         List<List<Integer>> ans = new ArrayList<>();
-        int sum =0;
-        check(nums,0, target, cur, ans, sum);
+        check(nums, 0, cur, ans, target);
         return ans;
         
     }
