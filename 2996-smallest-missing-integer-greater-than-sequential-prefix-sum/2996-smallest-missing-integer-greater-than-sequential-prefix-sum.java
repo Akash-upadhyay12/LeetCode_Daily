@@ -12,13 +12,13 @@ class Solution {
                 break;
             }
          }
-         HashSet<Integer> set = new HashSet<>();
-         for(int x : nums){
-           set.add(x);
+         HashMap<Integer, Integer> map = new HashMap<>();
+         for(int i = 0; i<nums.length; i++){
+           map.put(nums[i] , i);
          }
          int i = sum;
-         for(int x : set){
-            if(!set.contains(i)){
+         for(int x : map.values()){
+            if(!map.containsKey(i)){
                 return i;
             }
             i++;
