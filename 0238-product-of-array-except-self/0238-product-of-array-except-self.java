@@ -3,23 +3,19 @@ class Solution {
         int [] left = new int[nums.length];
         left[0] = 1;
         for(int i = 1; i<nums.length; i++){
-            left[i] = nums[i-1]*left[i-1];
-        }
+            left[i] = left[i-1]*nums[i-1];
+        } 
         int [] right = new int[nums.length];
-        right[nums.length-1] = 1;
+        right[right.length-1] = 1;
         for(int i = nums.length-2; i>=0; i--){
-            right[i] = right[i+1]*nums[i+1];
+            right[i] = right[i+1] * nums[i+1];
         }
-        int [] ans = new int[nums.length];
+        int [] fans = new int[nums.length];
         for(int i = 0; i<nums.length; i++){
-                ans[i] = left[i]*right[i];
-            
+            fans[i] = left[i]*right[i];
         }
-
-        System.out.println(Arrays.toString(left) + "Left");
-        System.out.println(Arrays.toString(right) + "right");
-
-        return ans;
-        
+        System.out.println(Arrays.toString(left));
+        System.out.println(Arrays.toString(right));
+        return fans;     
     }
 }
