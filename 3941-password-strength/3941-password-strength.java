@@ -1,27 +1,20 @@
 class Solution {
-    public int passwordStrength(String p) {
-        HashSet<Character> set = new HashSet<>();
-        int r = 0;
-        for(int i = 0; i<p.length(); i++){
-            set.add(p.charAt(i));
-        }
-        for(char ch : set){
-            if(Character.isLowerCase(ch)){
-                r +=1;
-            }
-           else if(Character.isUpperCase(ch)){
-                r +=2;
-            }
-            else if(!Character.isLetterOrDigit(ch)){
-                r += 5;;
-            }
-            else{
-                r += 3;
-            }
-        }
+    public int passwordStrength(String s) {
 
-        
-        return r;
+        HashSet<Character> set = new HashSet<>();
+        for(int i = 0; i<s.length(); i++){
+            set.add(s.charAt(i));
+        }
+        int sum = 0;
+
+        for(char ch : set){
+            if(Character.isDigit(ch)) sum += 3;
+            else if(Character.isLowerCase(ch)) sum += 1;
+            else if(Character.isUpperCase(ch)) sum += 2;
+            else sum += 5;
+        }
+        return sum;
+
         
     }
 }
