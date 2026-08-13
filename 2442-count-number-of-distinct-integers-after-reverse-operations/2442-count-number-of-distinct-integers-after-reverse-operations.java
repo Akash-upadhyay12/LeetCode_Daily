@@ -1,26 +1,26 @@
 class Solution {
     public int countDistinctIntegers(int[] nums) {
-        int [] arr = new int[2*nums.length];
-        int k = 0;
+        HashMap<Integer, Integer> map = new HashMap<>();
+        int count = 0;
         for(int i = 0; i<nums.length; i++){
-            int rev = 0;
-            int num = nums[i];
-            while(num>0){
-                int digit = num % 10;
-                rev = rev * 10 + digit;
-                num /= 10;
+            if(!map.containsKey(nums[i])){
+                map.put(nums[i], i);
+                count++;
             }
-            arr[k] = rev;
-            k++;
-            arr[k] = nums[i];
-            k++;
+            int rev = 0;
+            int y = nums[i];
+            while(y>0){
+                int digit = y % 10;
+                rev = rev * 10 + digit;
+                y /=10;
+            }
+            if(!map.containsKey(rev)){
+                count++;
+            }
+            map.put(rev, i);
         }
-        HashSet<Integer> set = new HashSet<>();
-        for(int ar : arr){
-            set.add(ar);
-        }
-        return set.size();
-        
+        return count;
+
         
     }
 }
