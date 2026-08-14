@@ -15,10 +15,6 @@ class Solution {
             second = nums[i];
         }
     }
-
-        System.out.println(first);
-        System.out.println(second);
-        System.out.println(min);
         return first + second - min;
 
         
