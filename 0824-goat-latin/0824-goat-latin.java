@@ -10,7 +10,6 @@ class Solution {
                     sb.append(arr[i]);
                 }
                 sb.append("m");
-
                 for(int z = 0; z<=y; z++){
                     sb.append("a");
                 }
