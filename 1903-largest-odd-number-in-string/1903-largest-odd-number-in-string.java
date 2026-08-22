@@ -1,6 +1,5 @@
 class Solution {
     public String largestOddNumber(String s) {
-        int max = -1;
         int i = s.length()-1;
         StringBuilder sb = new StringBuilder();
         while(i>=0){
