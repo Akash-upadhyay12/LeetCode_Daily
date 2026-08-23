@@ -14,19 +14,19 @@
  * }
  */
 class Solution {
-    List<Integer> check(TreeNode root, ArrayList<Integer> list) {
-    if (root == null) {
-        return list;
+    void check(TreeNode root, ArrayList<Integer> list){
+        if(root == null){
+            return;
+        }
+        check(root.left, list);
+        list.add(root.val);
+        check(root.right, list);
     }
-    check(root.left, list);
-    list.add(root.val);
-    check(root.right, list);
-    return list;
-}
     public int kthSmallest(TreeNode root, int k) {
         ArrayList<Integer> list = new ArrayList<>();
-        check(root ,list);
+        check(root, list);
         return list.get(k-1);
+
         
     }
 }
