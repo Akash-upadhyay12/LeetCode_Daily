@@ -6,22 +6,16 @@ class Solution {
         while(n>0){
             int digit = n % 2;
             if(use == false){
-                if(digit == 0){
-                    use = true;
-                }
-                else{
+                if(digit == 1){
                     even++;
-                    use = true;
                 }
+                use = true;
             }
             else{
-                if(digit == 0){
-                    use = false;
-                }
-                else{
+                if(digit == 1){
                     odd++;
-                    use = false;
                 }
+                use = false;
             }
             n /= 2;
 
