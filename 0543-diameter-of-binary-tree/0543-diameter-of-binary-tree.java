@@ -19,15 +19,17 @@ class Solution {
         if(root == null){
             return 0;
         }
-        int l = check(root.left);
-        int r = check(root.right);
-        ans = Math.max(ans, l + r);
-        return 1 + Math.max(l, r);
-
+        int a = check(root.left);
+        int b = check(root.right);
+        ans = Math.max(ans, a + b);
+        return 1 + Math.max(a, b);
 
     }
     public int diameterOfBinaryTree(TreeNode root) {
         check(root);
         return ans;
+        
+
+        
     }
 }
