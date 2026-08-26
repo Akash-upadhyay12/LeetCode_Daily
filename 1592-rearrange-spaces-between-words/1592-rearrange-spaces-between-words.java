@@ -36,7 +36,7 @@ class Solution {
             if(sb.length() == 0){
                 sb.append(arr[0]);
             }
-            if(space >= total){
+            if(space > 0){
                 for(int j = 1; j <= x; j++){
                     sb.append(" ");
                     space--;
