@@ -7,9 +7,8 @@ class Solution {
         int count =0;
         for(int i = 0; i<nums.length; i++){
             sum -= nums[i];
-            int temp = sum;
-            if(temp>0){
-                float ans = temp / (nums.length - i - 1);
+            if(sum>0){
+                float ans = sum / (nums.length - i - 1);
                 if(ans < nums[i]){
                     count++;
                 }
