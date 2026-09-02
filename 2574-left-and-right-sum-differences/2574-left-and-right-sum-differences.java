@@ -12,7 +12,7 @@ class Solution {
             int temp = ls + nums[i];
             rs = sum - temp;
             ans[i] = Math.abs(ls - rs);
-            rs = sum - (ls + nums[i]);
+           // rs = sum - (ls + nums[i]);
             ls += nums[i];
         }
         return ans;
