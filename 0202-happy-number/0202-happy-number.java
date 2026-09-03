@@ -4,7 +4,7 @@ class Solution {
             return true;
         }
         
-        int k = 100000;
+        int k = 1000;
         while(k-->0){
             int sum = 0;
             while(n > 0){
