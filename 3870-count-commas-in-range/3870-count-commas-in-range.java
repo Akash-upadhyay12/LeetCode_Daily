@@ -6,12 +6,6 @@ class Solution {
         if(n>=1000 && n<=100000){
             return n - 1000 + 1;
         }
-        // if(n >= 10000 && n <= 99999){
-        //     return n - 1000 + 1;
-        // // }
-        // if(n == 100000){
-        //     return 1;
-        // }
         return -1;
         
     }
