@@ -1,6 +1,6 @@
 class Solution {
     public long countCommas(long n) {
-        if(n <= 999){
+        if (n <= 999) {
             return 0;
         }
         long a = 1000L;
@@ -8,26 +8,20 @@ class Solution {
         long c = 1000000000L;
         long d = 1000000000000L;
         long e = 1000000000000000L;
-        if(n >= a && n<=b-1){
-            long ans = n - 999;
-            return ans;
+        if (n < b) {
+            return n - 999;
         }
-        else if(n>=b && n<=c-1){
-            long ans = (n-999)*2-999000;
-            return ans;
+        else if (n < c) {
+            return (n - 999) * 2 - 999000L;
         }
-        else if(n>=c && n<=d-1){
-            long ans = (n - 999)*3-1000998000L;
-            return ans;
+        else if (n < d) {
+            return (n - 999) * 3 - 1000998000L;
         }
-        else if(n>=d && n<=e-1){
-            long ans = (n - 999)*4-1000000000000L - 1000997000L;
-            return ans;
+        else if (n < e) {
+            return (n - 999) * 4 - 1001000997000L;
         }
-        else{
-            return (n-999)*5 - 1000000000000000L - 1001000996000L;
+        else {
+            return (n - 999) * 5 - 1001001000996000L;
         }
-
-        
     }
 }
