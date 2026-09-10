@@ -13,7 +13,7 @@ class Solution {
             return ans;
         }
         else if(n>=b && n<=c-1){
-            long ans = (n-999)*2-(1000000-1000);
+            long ans = (n-999)*2-999000;
             return ans;
         }
         else if(n>=c && n<=d-1){
@@ -25,7 +25,7 @@ class Solution {
             return ans;
         }
         else{
-            return (n-999)*5 + 998998999004000L-2000000000000000L;
+            return (n-999)*5 - 1000000000000000L - 1001000996000L;
         }
 
         
