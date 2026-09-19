@@ -1,14 +1,14 @@
 class Solution {
-    public boolean isAcronym(List<String> arr, String s) {
-        StringBuilder sb = new StringBuilder();
+    public boolean isAcronym(List<String> arr, String s){
+        if(arr.size() != s.length()){
+            return false;
+        }
         for(int i = 0; i<arr.size(); i++){
-            char [] nums = arr.get(i).toCharArray();
-            sb.append(nums[0]);
+            if(arr.get(i).charAt(0) != s.charAt(i)){
+                return false;
+            }
         }
-        if(s.equals(sb.toString())){
-            return true;
-        }
-        return false;
+        return true;
 
 
         
