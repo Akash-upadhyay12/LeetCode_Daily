@@ -10,9 +10,6 @@ class Solution {
             }
             i--;
         }
-        if(i<0){
-            return sb.toString();
-        }
         for(int j = 0; j<=i; j++){
             sb.append(s.charAt(j));
         }
