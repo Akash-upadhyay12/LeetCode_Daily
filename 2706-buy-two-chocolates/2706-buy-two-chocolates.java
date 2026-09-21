@@ -3,9 +3,19 @@ class Solution {
         if(nums.length == 1){
             return money;
         }
-        Arrays.sort(nums);
-        int ans = money - (nums[0] + nums[1]);
-        if(ans >=0){
+        int min = Integer.MAX_VALUE;
+        int secondMin = Integer.MAX_VALUE;
+        for (int i = 0; i < nums.length; i++) {
+         if (nums[i] < min) {
+            secondMin = min;
+            min = nums[i];
+            }
+            else if (nums[i] < secondMin) {
+            secondMin = nums[i];
+            }
+    }
+        int ans = money - (min + secondMin);
+        if(ans >= 0){
             return ans;
         }
         else{
