@@ -6,13 +6,12 @@ class Solution {
         for(int x : nums){
             map.put(x, map.getOrDefault(x, 0)+1);
         }
-        int mid = nums[n];
-        for(int y : map.keySet()){
-            if(map.get(y) == 1 && y == mid){
-                return true;
-            }
+        if(map.get(nums[nums.length/2]) == 1){
+            return true;
         }
-        return false;
+        else{
+            return false;
+        }
         
     }
 }
