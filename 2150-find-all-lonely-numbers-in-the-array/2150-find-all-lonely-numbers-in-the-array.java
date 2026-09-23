@@ -5,15 +5,12 @@ class Solution {
         for(int i = 0; i<nums.length; i++){
             map.put(nums[i], map.getOrDefault(nums[i], 0) +1);
         }
-        for(Integer r : map.keySet()){
-            if(map.get(r) == 1 && !map.containsKey(r-1) && !map.containsKey(r+1)){
-                list.add(r);
-
+        for(int i = 0; i<nums.length; i++){
+            if((map.get(nums[i]) == 1) && !map.containsKey(nums[i] + 1) && !map.containsKey(nums[i] - 1)){
+                list.add(nums[i]);
             }
         }
         return list;
-        
-        
         
     }
 }
