@@ -1,11 +1,12 @@
 class Solution {
-    public int maxArea(int[] nums) {
+    public int maxArea(int[] nums){
         int i = 0;
         int j = nums.length-1;
-        int max  = 0;
+        int max = Integer.MIN_VALUE;
         while(i<j){
-            int min = Math.min(nums[i],nums[j]);
-            int ans = min * (j-i);
+            int minheight = Math.min(nums[i], nums[j]);
+            int diff = j - i;
+            int ans = minheight * diff;
             max = Math.max(max, ans);
             if(nums[i]<nums[j]){
                 i++;
@@ -15,7 +16,6 @@ class Solution {
             }
         }
         return max;
-
         
     }
 }
