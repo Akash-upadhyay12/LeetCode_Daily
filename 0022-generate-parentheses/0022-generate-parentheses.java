@@ -15,9 +15,6 @@ class Solution {
             check(n, open, close+1, cur, ans);
             cur.deleteCharAt(cur.length()-1);
         }
-        
-
-
     }
     public List<String> generateParenthesis(int n) {
         int open = 0;
@@ -25,7 +22,6 @@ class Solution {
         StringBuilder cur = new StringBuilder();
         List<String> ans = new ArrayList<>();
         check(n, open, close, cur, ans);
-        return ans;
-        
+        return ans; 
     }
 }
