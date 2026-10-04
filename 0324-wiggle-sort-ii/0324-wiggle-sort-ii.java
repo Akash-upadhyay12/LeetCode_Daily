@@ -2,19 +2,22 @@ class Solution {
     public static void wiggleSort(int[] nums) {
         Arrays.sort(nums);
         int [] arr = new int[nums.length];
-        int l = (nums.length-1)/2;
-        int r = nums.length-1;
-        for(int i = 0; i<nums.length; i+=2){
-            arr[i] = nums[l];
-            l--;
-            if(i+1<nums.length){
-            arr[i+1] = nums[r];
-            r--;
+        int i =0;
+        int j = nums.length-1;
+        int k = 0;
+        while(i<j){
+            arr[k] = nums[i];
+            if(k+1 < arr.length){
+            arr[k+1] = nums[j];
             }
+            i++;
+            j--;
+            k+=2;
+            
         }
-
-        for(int i = 0; i<nums.length; i++){
-            nums[i] = arr[i];
+       
+        for(int p = 0; p<nums.length; p++){
+            nums[p] = arr[p];
         }
     }
 }
