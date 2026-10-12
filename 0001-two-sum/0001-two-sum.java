@@ -8,7 +8,7 @@ class Solution {
             }
             map.put(arr[i], i);
         }
-        return new int[] {-1, -1};
+        return new int[] {-1, -2};
         
         
     }
