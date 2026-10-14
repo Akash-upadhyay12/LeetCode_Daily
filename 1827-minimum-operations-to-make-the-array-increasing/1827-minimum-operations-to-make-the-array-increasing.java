@@ -10,11 +10,8 @@ class Solution {
                 int ans1 = inc - nums[i];
                 c += ans1;
                 nums[i] = inc;
-                
             }
-            
         }
         return c;
-        
     }
 }
