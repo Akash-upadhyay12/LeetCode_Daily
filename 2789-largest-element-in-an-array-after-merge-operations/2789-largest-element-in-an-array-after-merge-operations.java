@@ -1,18 +1,17 @@
 class Solution {
-    public long maxArrayValue(int[] nums) {
-        long[] arr = new long[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            arr[i] = nums[i];
+    public long maxArrayValue(int[] nums){
+        if(nums.length == 1){
+            return nums[0];
         }
-        if (arr.length == 1) {
-            return arr[0];
-        }
-        for (int i = arr.length - 1; i > 0; i--) {
-            long pref = arr[i - 1];
-            if (pref <= arr[i]) {
-                arr[i - 1] = arr[i - 1] + arr[i];
+        long pref = nums[nums.length-1];
+        for(int i = nums.length-2; i>=0; i--){
+            if(nums[i] <= pref){
+                pref += nums[i];
+            }
+            else{
+                pref = nums[i];
             }
         }
-        return arr[0];
+        return pref;
     }
 }
