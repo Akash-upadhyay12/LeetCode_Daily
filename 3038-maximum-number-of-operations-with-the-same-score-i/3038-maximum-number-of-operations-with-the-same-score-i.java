@@ -1,25 +1,15 @@
 class Solution {
-    public int maxOperations(int[] nums){
-        if(nums.length == 2){
-            return 1;
-        }
+    public int maxOperations(int[] nums) {
+        int sum= nums[0] + nums[1];
         int c = 1;
-        int sum = nums[0] + nums[1];
-        int i = 2;
-        int j = 3;
-        while(j<nums.length){
-            int ans = nums[i] + nums[j];
-            if(sum == ans){
-                sum = ans;
+        for (int i = 2; i + 1 < nums.length; i += 2) {
+            if (nums[i] + nums[i + 1] == sum) {
                 c++;
-                i+=2;
-                j+=2;
-            }
-            else{
+            } else {
                 break;
             }
         }
+
         return c;
-        
     }
 }
