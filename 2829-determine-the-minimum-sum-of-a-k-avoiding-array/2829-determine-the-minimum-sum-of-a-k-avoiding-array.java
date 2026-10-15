@@ -1,6 +1,6 @@
 class Solution {
     public int minimumSum(int n, int k){
-        int [] arr = new int[1000];
+        int [] arr = new int[500];
         int a = 1;
         for(int i = 0; i<arr.length; i++){
             arr[i] = a;
