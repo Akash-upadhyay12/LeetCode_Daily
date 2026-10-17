@@ -20,7 +20,6 @@ class Solution {
             temp.append(sb.toString());
 
         }
-        System.out.println(Arrays.toString(arr));
         return temp.toString();
         
     }
