@@ -1,16 +1,5 @@
 class Solution {
     public int candy(int[] nums){
-        if(nums.length == 1){
-            return 1;
-        }
-        if(nums.length == 2){
-            if(nums[0] > nums[1] || nums[1] > nums[0]){
-                return 3;
-            }
-            else{
-                return 2;
-            }
-        }
         int [] arr = new int[nums.length];
         Arrays.fill(arr, 1);
         for(int i = 1; i<nums.length; i++){
