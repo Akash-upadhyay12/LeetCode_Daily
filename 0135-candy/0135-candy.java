@@ -23,9 +23,6 @@ class Solution {
                 if(arr[i] <= arr[i+1]){
                     arr[i] = arr[i+ 1] + 1;
                 }
-                // else{
-                //     arr[i] = arr[i+1] + 1;
-                // }
             }
         }
         int sum = 0;
