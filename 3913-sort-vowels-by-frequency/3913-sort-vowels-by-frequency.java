@@ -33,7 +33,6 @@ class Solution {
                 idx++;
             }
         }
-
         return sb.toString();
     }
 }
