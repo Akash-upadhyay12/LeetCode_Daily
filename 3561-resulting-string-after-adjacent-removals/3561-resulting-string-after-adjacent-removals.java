@@ -23,7 +23,6 @@ class Solution {
                 }
             }
         }
-        System.out.println(st.size());
         StringBuilder sb = new StringBuilder();
         for(char ch : st){
             sb.append(ch);
