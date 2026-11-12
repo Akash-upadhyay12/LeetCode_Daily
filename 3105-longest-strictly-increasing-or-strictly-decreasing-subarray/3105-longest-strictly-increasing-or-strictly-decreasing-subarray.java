@@ -1,6 +1,7 @@
 class Solution {
     public int longestMonotonicSubarray(int[] nums) {
     // count1 for increasing order
+    // count2 for decreasing order
     int count1 = 1;
     int count2 = 1;
     int max1 = 1;
