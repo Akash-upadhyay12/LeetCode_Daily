@@ -1,8 +1,8 @@
 class Solution {
     public int minimizeSum(int[] nums) {
-        // if(nums.length == 3){
-        //     return 0;
-        // }
+        if(nums.length == 3){
+            return 0;
+        }
         Arrays.sort(nums);
         int a = Math.abs(nums[nums.length-1] - nums[2]);
         int b = Math.abs(nums[nums.length-2] - nums[1]);
