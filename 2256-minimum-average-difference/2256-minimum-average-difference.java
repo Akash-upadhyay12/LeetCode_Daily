@@ -28,7 +28,7 @@ class Solution {
                 idx = i;
             }
         }
-        System.out.println(Arrays.toString(arr) + sum);
+        //System.out.println(Arrays.toString(arr) + sum);
         return idx;
     }
 }
