@@ -1,13 +1,10 @@
 class Solution {
-    public boolean isAdjacentDiffAtMostTwo(String s){
-        for(int i = 0; i<s.length()-1; i++){
-            int a = Integer.parseInt(String.valueOf(s.charAt(i)));
-            int b = Integer.parseInt(String.valueOf(s.charAt(i+1)));
-            if(Math.abs(b - a) > 2){
-                return false;
-            }
-        }
+    public boolean isAdjacentDiffAtMostTwo(String s) {
+       for(int i=1; i<s.length(); i++) {		
+			if(Math.abs(s.charAt(i-1) - s.charAt(i))>2) {
+				return false;
+			}
+		}
         return true;
-        
     }
 }
