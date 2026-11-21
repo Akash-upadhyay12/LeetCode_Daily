@@ -1,28 +1,30 @@
 class Solution {
     public int minimumAverageDifference(int[] nums){
-
-        long [] arr = new long[nums.length];
-        long sum = nums[0];
-        arr[0] = sum;
-        int a = 1;
-        for(int i = 1; i<nums.length; i++){
-            sum += nums[i];
-            arr[a] = sum;
-            a++;
+        long sum = 0;
+        for(int x : nums){
+            sum += x;
         }
-        long min = Long.MAX_VALUE;
-        int idx = 0;
-        for(int i = 0; i<arr.length; i++){
-            long x = arr[i]/(i+1);
-            long y = 0;
 
-            if(i == arr.length-1){
+        long min = Long.MAX_VALUE;
+        long cursum = 0;
+        int idx = 0;
+
+        for(int i = 0; i<nums.length; i++){
+            cursum += nums[i];
+            long y = 0;
+            long a = cursum / (i + 1);
+            long b = Math.abs(sum - cursum);
+
+            if(i == nums.length - 1){
                 y = 0;
             }
             else{
-                y = (sum - arr[i])/(arr.length-i-1);
+                b /= (nums.length-i-1);
+                y = b;
             }
-            long diff = Math.abs(x-y);
+
+            long diff = Math.abs(a-y);
+
             if(diff < min){
                 min = diff;
                 idx = i;
