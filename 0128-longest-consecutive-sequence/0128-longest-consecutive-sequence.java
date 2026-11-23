@@ -12,14 +12,12 @@ class Solution {
         for(int i = 1; i<nums.length; i++){
             if(nums[i]-nums[i-1] == 1){
                 count++;
-                max = Math.max(max, count);
             }
-            else if(nums[i]-nums[i-1]>1){
+            else if(nums[i] - nums[i-1] > 1){
                 count = 1;
-                max = Math.max(max, count);
             }
+            max = Math.max(max, count);
         }
         return max;
-        
     }
 }
