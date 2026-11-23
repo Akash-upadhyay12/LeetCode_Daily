@@ -14,8 +14,8 @@ class Solution {
         for(int i = 0; i<nums.length; i++){
             fans[i] = left[i]*right[i];
         }
-        System.out.println(Arrays.toString(left));
-        System.out.println(Arrays.toString(right));
+        //System.out.println(Arrays.toString(left));
+        //System.out.println(Arrays.toString(right));
         return fans;     
     }
 }
